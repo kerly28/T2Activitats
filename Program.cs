@@ -1,6 +1,6 @@
 ﻿//PRE: L'usuari introdueix un número
 
-using system;
+using System;
 
 namespace Metode
 {
