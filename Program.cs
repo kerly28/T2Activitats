@@ -20,7 +20,7 @@ namespace Metode
         public static void Main()
         {
             int num, exp;
-            Console.WriteLine("Introdueix un numero:");
+            Console.WriteLine("Introdueix un número:");
             try
             {
                 num = Convert.ToInt32(Console.ReadLine());
