@@ -17,7 +17,7 @@ namespace Metode
                 numUser = Convert.ToInt32(Console.ReadLine());
                 if (Natural(numUser))
                 {
-                    Console.WriteLine("Es natural");
+                    Console.WriteLine("És natural");
                 }
                 else
                 {
