@@ -21,7 +21,7 @@ namespace Metode
                 }
                 else
                 {
-                    Console.WriteLine("No es natural");
+                    Console.WriteLine("No és natural");
                 }
 
             }
