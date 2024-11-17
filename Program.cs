@@ -1,4 +1,5 @@
-﻿using System;
+﻿//PRE: L'usuari introdueix un numero
+using System;
 
 namespace Metode
 {
@@ -22,7 +23,7 @@ namespace Metode
                 }
                 else
                 {
-                    Console.WriteLine("El numero no es negatiu");
+                    Console.WriteLine("El numero no és negatiu");
                 }
             }
             catch (Exception)
@@ -32,3 +33,4 @@ namespace Metode
         }
     }
 }
+//POST: El programa diu si el numero es negatiu o no
