@@ -1,37 +1,26 @@
-using System;
-public class NumeroReal
+//PRE: L'usuari introdueix un número
+using system;
+namespace Metode
 {
-    public static void Main()
+    public class Program
     {
-
-        Num();
-
-    }
-    public static void Num()
-    {
-
-        bool compro = false;
-
-        for (int i = 3; i > 0 && compro == false; i--)
+        public static double ValorAbsolut(double usernum)
         {
-            Console.WriteLine("Introdueix un número");
-            int s = Convert.ToInt32(Console.ReadLine());
-
-            if (s > 0)
+            if (usernum < 0)
             {
-                Console.WriteLine("És un número real");
-                compro = true;
+                usernum = -usernum;
             }
-            if (s < 0)
-            {
-
-                Console.WriteLine($" El número no es real, té {i - 1} intents");
-
-            }
+            return usernum;
         }
-        if (!compro)
+
+        public static void Main()
         {
-            Console.WriteLine("T'has quedat sense intents");
+           
+            Console.WriteLine("Introdueix un número:");
+            double usernum = Convert.ToDouble(Console.ReadLine()); 
+            double resultat = ValorAbsolut(usernum);
+            Console.WriteLine($"El valor absolut de {usernum} és {resultat}");
         }
     }
 }
+//POST: Retorna el valor absolut del nuúmero introduït
