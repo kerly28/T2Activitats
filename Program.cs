@@ -1,5 +1,5 @@
-﻿//PRE: S'introdueix graus (serà interpretat com a Celsius)
-using System;
+//PRE: S'introdueix graus (serà interpretat com a Celsius)
+using system
 namespace Metode
 {
     public class Program
