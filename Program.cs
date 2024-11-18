@@ -1,7 +1,5 @@
 ﻿//PRE: L'usuari introdueix dos valors enters
-
 using System;
-
 namespace Metode
 {
     public class Program
