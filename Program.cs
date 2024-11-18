@@ -1,4 +1,5 @@
-﻿//PRE: L'usuari introdueix un número
+//PRE: L'usuari introdueix un número
+
 using System;
 
 namespace Metode
@@ -37,3 +38,4 @@ namespace Metode
     }
 }
 //POST: El programa retorna si el número és positiu i menor a 100
+
