@@ -1,9 +1,22 @@
-//PRE: L'usuari introdueix dos valors enters
+//PRE: L'usuari introdueix un nombre decimal
 using System;
+
 namespace Metode
 {
     public class Program
     {
+        // Retorna la part entera del número
+        public static int Enter(double usernum)
+        {
+            return (int)Math.Floor(usernum);
+        }
+
+        // Retorna la part decimal del número
+        public static double Decimal(double usernum)
+        {
+            double usernum2 = usernum - Math.Floor(usernum);
+            return Math.Round(usernum2, 2);
+          
         // Retorna el mínim dels dos números
         public static int Min(int num1, int num2)
         {
@@ -33,18 +46,19 @@ namespace Metode
         // Mètode principal
         public static void Main()
         {
-            const string Msg1 = "Introdueix un número:";
-            const string Msg2 = "Introdueix un altre número:";
+            try
+            {
+                Console.WriteLine("Introdueix un número decimal:");
+                double usernum = Convert.ToDouble(Console.ReadLine()); // Llegim un número decimal
 
-            Console.WriteLine(Msg1);
-            int usernum1 = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine(Msg2);
-            int usernum2 = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("El valor màxim és: " + Max(usernum1, usernum2));
-            Console.WriteLine("El valor mínim és: " + Min(usernum1, usernum2));
+                Console.WriteLine($"La part entera és: {Enter(usernum)} i la part decimal és: {Decimal(usernum)}");
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Error");
+            }
         }
     }
 }
-//POST: El programa retorna el màxim i el mínim dels dos valors introduïts
+//POST: El programa retorna la part entera i la part decimal
+
