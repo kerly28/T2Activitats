@@ -1,27 +1,21 @@
-//PRE: S'introdueix graus (serà interpretat com a Celsius)
+//PRE: L'usuari introdueix uns minuts
 using system
+
 namespace Metode
 {
     public class Program
     {
-        public static int ConvertirCelsiusAFahrenheit(int celsius)
+
+        public static int Segons(int minuts)
         {
-            return (celsius * 9 / 5) + 32;
+        return minuts * 60;
         }
         public static void Main()
         {
-            int celsius;
-            Console.WriteLine("Introdueix els graus Celsius:");
-            try
-            {
-                celsius = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Els graus en Fahrenheit són: " + ConvertirCelsiusAFahrenheit(celsius));
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Error");
-            }
+            Console.WriteLine("Introdueix els minuts que vols convertir a segons:");
+            int minuts = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Els minuts introduïts són en total {Segons(minuts)} segons");
         }
     }
 }
-//POST: El programa converteix els graus Celsius introduits en Fahrenheit
+//POST: Es mostra els minuts en segons
