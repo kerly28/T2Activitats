@@ -1,38 +1,26 @@
-﻿//PRE: L'usuari introdueix una frase
-//POST: El programa retorna la frase en majúscules si l'usuari la introdueix en minúscules i viceversa
-
-using System;
-
+//PRE: L'usuari introdueix un número
+using system;
 namespace Metode
 {
     public class Program
     {
-        public static string Upper(string s)
+        public static double ValorAbsolut(double usernum)
         {
-            return s.ToUpper();
-
-        }
-        public static string Lower(string s)
-        {
-            return s.ToLower();
-        }
-
-        public static void Main(string[] args)
-        {
-            Console.WriteLine("Introdueix una frase:");
-            string user = Console.ReadLine();
-
-            if (user == user.ToUpper())
+            if (usernum < 0)
             {
-                Console.WriteLine($"Retorn en minúscules: {user.ToLower()}");
+                usernum = -usernum;
             }
-            else
-            {
-                Console.WriteLine($"Retorn en majúscules: {user.ToUpper()}");
-            }
+            return usernum;
+        }
 
-
+        public static void Main()
+        {
+           
+            Console.WriteLine("Introdueix un número:");
+            double usernum = Convert.ToDouble(Console.ReadLine()); 
+            double resultat = ValorAbsolut(usernum);
+            Console.WriteLine($"El valor absolut de {usernum} és {resultat}");
         }
     }
-
 }
+//POST: Retorna el valor absolut del nuúmero introduït
