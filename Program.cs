@@ -1,11 +1,11 @@
-﻿//PRE: L'usuari ha d'introduir quants valors vol introduïr hi ha de estar entre 15 i 100
+//PRE: L'usuari ha d'introduir quants valors vol introduïr hi ha de estar entre 15 i 100
 using System;
 
 namespace Metode
 {
     public class Program
-    {
-        // Mètode per introduir un valor
+    {        
+      // Mètode per introduir un valor
         public static int Value(int num)
         {
             Console.Write("Introdueix quants valors vols introduïr: ");
@@ -46,7 +46,7 @@ namespace Metode
             int numValors = Value(0);
             if (numValors < 1)
             {
-                Console.WriteLine("Nombre de valors invàlid. Finalitzant el programa.");
+                Console.WriteLine("Nombre de valors invàlid");
                 return;
             }
 
@@ -79,3 +79,4 @@ namespace Metode
     }
 }
 //POST: El programa mostrarà el producte dels valors introduïts per l'usuari
+
