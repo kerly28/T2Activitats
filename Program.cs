@@ -1,9 +1,11 @@
-﻿//PRE: L'usuari introdueix uns minuts
-using System;
+//PRE: L'usuari introdueix uns minuts
+using system
+
 namespace Metode
 {
     public class Program
     {
+
         public static int Segons(int minuts)
         {
         return minuts * 60;
@@ -16,4 +18,4 @@ namespace Metode
         }
     }
 }
-//POST: Es mostra el valor en segons
+//POST: Es mostra els minuts en segons
