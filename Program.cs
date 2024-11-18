@@ -1,41 +1,37 @@
-//PRE: L'usuari introdueix un número
-
 using System;
-
-namespace Metode
+public class NumeroReal
 {
-    public class Program
+    public static void Main()
     {
-        public static bool PositiveRank(int num)
+
+        Num();
+
+    }
+    public static void Num()
+    {
+
+        bool compro = false;
+
+        for (int i = 3; i > 0 && compro == false; i--)
         {
-            return (num > 0 && num < 100);
+            Console.WriteLine("Introdueix un número");
+            int s = Convert.ToInt32(Console.ReadLine());
+
+            if (s > 0)
+            {
+                Console.WriteLine("És un número real");
+                compro = true;
+            }
+            if (s < 0)
+            {
+
+                Console.WriteLine($" El número no es real, té {i - 1} intents");
+
+            }
         }
-
-        public static void Main(string[] args)
+        if (!compro)
         {
-            int num;
-            Console.WriteLine("Introdueix un número:");
-            try
-            {
-                num = Convert.ToInt32(Console.ReadLine());
-
-                if (PositiveRank(num))
-                {
-                    Console.WriteLine("El numero es positiu i menor a 100");
-                }
-                else
-                {
-                    Console.WriteLine("El numero no es un nombre vàlid");
-                }
-
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Error");
-
-            }
+            Console.WriteLine("T'has quedat sense intents");
         }
     }
 }
-//POST: El programa retorna si el número és positiu i menor a 100
-
