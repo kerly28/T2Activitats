@@ -1,39 +1,29 @@
-//PRE: L'usuari introdueix una frase
-using system;
+//PRE: L'usuari introdueix un any
+using System;
 
 namespace Metode
 {
     public class Program
     {
-
-        public static string Upper(string s)
+        public static bool Traspas(int age)
         {
-            return s.ToUpper();
-
+            return age % 4 == 0;
         }
-        public static string Lower(string s)
+        public static void Main()
         {
-            return s.ToLower();
-        }
-
-        public static void Main(string[] args)
-        {
-            Console.WriteLine("Introdueix una frase:");
-            string user = Console.ReadLine();
-
-            if (user == user.ToUpper())
+            Console.WriteLine("Introdueix un any:");
+            int useryear;
+            useryear = Convert.ToInt32(Console.ReadLine());
+            if (Traspas(useryear))
             {
-                Console.WriteLine($"Retorn en minúscules: {user.ToLower()}");
+                Console.WriteLine("És un any de traspàs");
             }
             else
             {
-                Console.WriteLine($"Retorn en majúscules: {user.ToUpper()}");
+                Console.WriteLine("No és un any de traspàs");
             }
-
-
         }
     }
-
 }
-//POST: El programa retorna la frase en majúscules si l'usuari la introdueix en minúscules i viceversa
+//POST: L'any introduït s'informa si és any de traspàs o no
 
