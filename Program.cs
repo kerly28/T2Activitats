@@ -1,41 +1,36 @@
-// PRE: l'usuari introdueix un nombre enter y una potència
+//PRE: L'usuari introdueix un numero
 using System;
 
 namespace Metode
 {
     public class Program
     {
-
-
-        public static int Potencia(int num, int exp)
+        public static bool Negatiu(int num)
         {
-            int result = 1;
-            for (int i = 0; i < exp; i++)
-            {
-                result *= num;
-            }
-            return result;
+            return num < 0;
         }
-
         public static void Main()
         {
-            int num, exp;
-            Console.WriteLine("Introdueix un número:");
+            int num;
+            Console.WriteLine("Introdueix un numero");
+
             try
             {
                 num = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Introdueix la potencia:");
-                exp = Convert.ToInt32(Console.ReadLine());
-
-                int result = Potencia(num, exp);
-                Console.WriteLine($"El resultat de {num} elevat a la potencia {exp} és: {result}");
-
+                if (Negatiu(num))
+                {
+                    Console.WriteLine("El numero si es negatiu");
+                }
+                else
+                {
+                    Console.WriteLine("El numero no és negatiu");
+                }
             }
-
             catch (Exception)
             {
-                Console.WriteLine("S'ha produït un error.");
+                Console.WriteLine("Error");
             }
         }
     }
 }
+//POST: El programa diu si el numero es negatiu o no
