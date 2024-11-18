@@ -1,6 +1,6 @@
-//PRE: L'usuari introdueix dos valors enters
-using system;
 
+//PRE: L'usuari introdueix dos valors enters
+using system
 namespace Metode
 {
     public class Program
@@ -25,4 +25,5 @@ namespace Metode
     }
 }
 //POST: El programa intercanvia els valors introduits per l'usuari
+
 
