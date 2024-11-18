@@ -1,29 +1,27 @@
-
-//PRE: L'usuari introdueix dos valors enters
+//PRE: S'introdueix graus (serà interpretat com a Celsius)
 using system
 namespace Metode
 {
     public class Program
     {
-        public static void Swap(ref int a, ref int b)
+        public static int ConvertirCelsiusAFahrenheit(int celsius)
         {
-            int temp = a;
-            a = b;
-            b = temp;
+            return (celsius * 9 / 5) + 32;
         }
-        public static void Main(string[] args)
-
+        public static void Main()
         {
-            Console.WriteLine("Introdueix el primer valor:");
-            int valor1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Introdueix el segon valor:");
-            int valor2 = Convert.ToInt32(Console.ReadLine());
-
-            Swap(ref valor1, ref valor2);
-            Console.WriteLine($"Valors intercanviats: valor1= {valor1}, valor2= {valor2}");
+            int celsius;
+            Console.WriteLine("Introdueix els graus Celsius:");
+            try
+            {
+                celsius = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Els graus en Fahrenheit són: " + ConvertirCelsiusAFahrenheit(celsius));
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Error");
+            }
         }
     }
 }
-//POST: El programa intercanvia els valors introduits per l'usuari
-
-
+//POST: El programa converteix els graus Celsius introduits en Fahrenheit
