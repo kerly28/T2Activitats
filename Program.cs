@@ -1,4 +1,5 @@
-﻿using System;
+//PRE: L'usuari introdueix un número enter
+using System;
 
 namespace Metode
 {
@@ -32,3 +33,4 @@ namespace Metode
         }
     }
 }
+
