@@ -1,11 +1,11 @@
-﻿// PRE: l'usuari introdueix un nombre enter y una potència
-
+// PRE: l'usuari introdueix un nombre enter y una potència
 using System;
 
 namespace Metode
 {
     public class Program
     {
+
 
         public static int Potencia(int num, int exp)
         {
@@ -39,4 +39,3 @@ namespace Metode
         }
     }
 }
-// PRECON: es mostra per pantalla el resultat de la potència del nombre introduït per l'usuari
