@@ -1,36 +1,41 @@
-//PRE: L'usuari introdueix un número enter
+// PRE: l'usuari introdueix un nombre enter y una potència
 using System;
 
 namespace Metode
 {
     public class Program
     {
-        public static bool Natural(int numUser)
+
+
+        public static int Potencia(int num, int exp)
         {
-            return (numUser >= 0);
+            int result = 1;
+            for (int i = 0; i < exp; i++)
+            {
+                result *= num;
+            }
+            return result;
         }
-        public static void Main(string[] args)
+
+        public static void Main()
         {
-            int numUser;
-            Console.WriteLine("Introdueix un numero:");
+            int num, exp;
+            Console.WriteLine("Introdueix un número:");
             try
             {
-                numUser = Convert.ToInt32(Console.ReadLine());
-                if (Natural(numUser))
-                {
-                    Console.WriteLine("És natural");
-                }
-                else
-                {
-                    Console.WriteLine("No és natural");
-                }
+                num = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Introdueix la potencia:");
+                exp = Convert.ToInt32(Console.ReadLine());
+
+                int result = Potencia(num, exp);
+                Console.WriteLine($"El resultat de {num} elevat a la potencia {exp} és: {result}");
 
             }
+
             catch (Exception)
             {
-                Console.WriteLine("Error");
+                Console.WriteLine("S'ha produït un error.");
             }
         }
     }
 }
-
