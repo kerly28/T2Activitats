@@ -1,27 +1,37 @@
-﻿//PRE: L'usuari introdueix dos valors enters
 using System;
-
-namespace Metode
+public class NumeroReal
 {
-    public class Program
+    public static void Main()
     {
-        public static void Swap(ref int a, ref int b)
+
+        Num();
+
+    }
+    public static void Num()
+    {
+
+        bool compro = false;
+
+        for (int i = 3; i > 0 && compro == false; i--)
         {
-            int temp = a;
-            a = b;
-            b = temp;
+            Console.WriteLine("Introdueix un número");
+            int s = Convert.ToInt32(Console.ReadLine());
+
+            if (s > 0)
+            {
+                Console.WriteLine("És un número real");
+                compro = true;
+            }
+            if (s < 0)
+            {
+
+                Console.WriteLine($" El número no es real, té {i - 1} intents");
+
+            }
         }
-        public static void Main(string[] args)
-
+        if (!compro)
         {
-            Console.WriteLine("Introdueix el primer valor:");
-            int valor1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Introdueix el segon valor:");
-            int valor2 = Convert.ToInt32(Console.ReadLine());
-
-            Swap(ref valor1, ref valor2);
-            Console.WriteLine($"Valors intercanviats: valor1= {valor1}, valor2= {valor2}");
+            Console.WriteLine("T'has quedat sense intents");
         }
     }
 }
-//POST: El programa intercanvia els valors introduits per l'usuari
