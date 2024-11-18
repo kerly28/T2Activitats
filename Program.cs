@@ -1,4 +1,4 @@
-﻿//PRE: L'usuari introdueix un any
+//PRE: L'usuari introdueix un any
 using System;
 
 namespace Metode
@@ -26,3 +26,4 @@ namespace Metode
     }
 }
 //POST: L'any introduït s'informa si és any de traspàs o no
+
