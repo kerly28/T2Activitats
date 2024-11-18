@@ -1,6 +1,5 @@
-﻿//PRE: L'usuari introdueix dos valors enters
+//PRE: L'usuari introdueix dos valors enters
 using System;
-
 namespace Metode
 {
     public class Program
@@ -48,4 +47,4 @@ namespace Metode
         }
     }
 }
-//POST: El programa retorna el màxim i el mínim dels dos valors introduïts.
+//POST: El programa retorna el màxim i el mínim dels dos valors introduïts
