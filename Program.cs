@@ -1,4 +1,4 @@
-﻿//PRE: L'usuari introdueix un numero
+//PRE: L'usuari introdueix un numero
 using System;
 
 namespace Metode
