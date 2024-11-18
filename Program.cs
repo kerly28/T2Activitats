@@ -1,11 +1,11 @@
-﻿//PRE: L'usuari introdueix una frase
-
-using System;
+//PRE: L'usuari introdueix una frase
+using system;
 
 namespace Metode
 {
     public class Program
     {
+
         public static string Upper(string s)
         {
             return s.ToUpper();
@@ -36,3 +36,4 @@ namespace Metode
 
 }
 //POST: El programa retorna la frase en majúscules si l'usuari la introdueix en minúscules i viceversa
+
