@@ -16,33 +16,7 @@ namespace Metode
         {
             double usernum2 = usernum - Math.Floor(usernum);
             return Math.Round(usernum2, 2);
-          
-        // Retorna el mínim dels dos números
-        public static int Min(int num1, int num2)
-        {
-            if (num1 > num2)
-            {
-                return num2;
-            }
-            else
-            {
-                return num1;
-            }
         }
-
-        // Retorna el màxim dels dos números
-        public static int Max(int num1, int num2)
-        {
-            if (num1 < num2)
-            {
-                return num2;
-            }
-            else
-            {
-                return num1;
-            }
-        }
-
         // Mètode principal
         public static void Main()
         {
